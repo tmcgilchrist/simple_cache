@@ -1,3 +1,15 @@
+        __TASKS__
+- shell script to startup boot nodes for cache distribution.
+- unit tests for individual modules
+- integration level tests for probing the cache and testing the right value is returned.
+
+
+
+
+
+
+
+        __NOTES__
 - how many reltool.config per application (one for the whole application, and one each for the apps)
 
 - definition of application, module and release? Service?

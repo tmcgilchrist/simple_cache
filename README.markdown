@@ -11,3 +11,6 @@ the original authors and all mistakes are my own.
 
 Tim
 
+
+## Useful Links
+  * [How to create, build, and run an Erlang OTP application using Rebar](http://skeptomai.com/?p=56#sec-4)
