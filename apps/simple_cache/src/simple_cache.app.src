@@ -1,17 +1,24 @@
 {application, simple_cache,
  [
-  {description, ""},
-  {vsn, "1"},
+  {description, "A simple caching system"},
+  {vsn, "0.1.0"},
   {modules, [
+            simple_cache,
             sc_app,
             sc_sup,
+            sc_element_sup,
             sc_store,
-            sc_element
+            sc_element,
+            sc_event,
+            sc_event_logger
             ]},
-  {registered, []},
+  {registered, [sc_sup]},
   {applications, [
                   kernel,
-                  stdlib
+                  stdlib,
+                  sasl,
+                  mnesia,
+                  resource_discovery
                  ]},
   {mod, { sc_app, []}},
   {env, []}
