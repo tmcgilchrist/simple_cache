@@ -1,0 +1,17 @@
+{application, resource_discovery,
+ [
+  {description, "Resource Discovery"},
+  {vsn, "0.1.0"},
+  {modules, [
+            rd_app,
+            rd_sup,
+            rd_server
+            ]},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { rd_app, []}},
+  {env, []}
+ ]}.
