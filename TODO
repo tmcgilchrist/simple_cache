@@ -1,0 +1,20 @@
+- how many reltool.config per application (one for the whole application, and one each for the apps)
+
+- definition of application, module and release? Service?
+
+Module: - Bunch of functions grouped in a single file under a single name
+
+Application: - the way you package related modules in Erlang. Unit of functionality.
+
+Release: - A release consists of a set of applications together with some metadata specifying how to start and manage those applications as a system.
+         A release contains a stripped down Erlang runtime just for the applications included.
+
+rebar.config -> rebar configuration for the meta-application.
+apps -> individual applications that make up this release
+     |-> resource_discovery
+     | \-> rebar.config -rebar configuration for this individual Erlang application
+     |
+     \-> simple_cache
+      \-> rebar.config - rebar configuration for this individual Erlang application
+rel -> reltool.config
+    -> Other stuff.
