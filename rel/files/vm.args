@@ -1,9 +1,9 @@
 
 ## Name of the node
--name simple_cache@127.0.0.1
+-name simple_cache
 
 ## Cookie for distributed erlang
--setcookie simple_cache
+-setcookie xxxxxxxx
 
 ## Heartbeat management; auto-restarts VM if it dies or becomes unresponsive
 ## (Disabled by default..use with caution!)
@@ -18,4 +18,3 @@
 
 ## Tweak GC to run more often
 -env ERL_FULLSWEEP_AFTER 10
-
