@@ -11,6 +11,12 @@ the original authors and all mistakes are my own.
 
 Tim
 
+## Running
+
+  * Start 2 nodes in a terminal 'erl –name contact1 -setcookie xxxxxxxx' and
+    'erl –name contact2 -setcookie xxxxxxxx'
+  * make && ./rebar generate -f
+  * Run the application ./rel/simple_cache/bin/simple_cache console
 
 ## Useful Links
   * [How to create, build, and run an Erlang OTP application using Rebar](http://skeptomai.com/?p=56#sec-4)
