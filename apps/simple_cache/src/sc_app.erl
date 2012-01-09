@@ -24,7 +24,7 @@ stop(_State) ->
     ok.
 
 ensure_contact() ->
-    DefaultNodes = ['contact1@localhost', 'contact2@localhost'],
+    DefaultNodes = ['contact1@athena.local', 'contact2@athena.local'],
     case get_env(simple_cache, contact_nodes, DefaultNodes) of
         [] ->
             {error, no_contact_nodes};
@@ -33,8 +33,7 @@ ensure_contact() ->
     end.
 
 ensure_contact(ContactNodes) ->
-    Answering = [N || N <- ContactNodes,
-                      net_adm:ping(N) =:= pong],
+    Answering = [N || N <- ContactNodes, net_adm:ping(N) =:= pong],
     case Answering of
         [] ->
             {error, no_contact_nodes_reachable};
@@ -67,4 +66,3 @@ get_env(AppName, Key, Default) ->
         {ok, Value} ->
             Value
     end.
-
