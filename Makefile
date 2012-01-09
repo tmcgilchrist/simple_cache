@@ -19,3 +19,6 @@ clean:
 
 release: all test
 	dialyzer --src src/*.erl deps/*/src/*.erl
+
+tags:
+	find . -name "*.[he]rl" -print | etags -
