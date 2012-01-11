@@ -47,7 +47,7 @@ handle_cast(trade_resources, State) ->
     lists:foreach(
       fun(Node) ->
               gen_server:cast({?SERVER, Node},
-                              {trace_resources, {node(), ResourceTuples}})
+                              {trade_resources, {node(), ResourceTuples}})
       end,
       AllNodes),
     {noreply, State};
@@ -62,7 +62,7 @@ handle_cast({trade_resources, {ReplyTo, Remotes}},
             ok;
         _ ->
             gen_server:cast({?SERVER, ReplyTo},
-                            {trace_resources, {noreply, Locals}})
+                            {trade_resources, {noreply, Locals}})
     end,
     {noreply, State#state{found_resource_tuples = NewFound}}.
 
@@ -78,7 +78,7 @@ fetch_resources(Type) ->
     gen_server:call(?SERVER, {fetch_resources, Type}).
 
 trade_resources() ->
-    gen_server:cast(?SERVER, trace_resources).
+    gen_server:cast(?SERVER, trade_resources).
 
 add_resources([{Type, Resource} | T], ResourceTuples) ->
     add_resources(T, add_resource(Type, Resource, ResourceTuples));
