@@ -1,8 +1,7 @@
         __TASKS__
-- find out how to add mnesia to an erlang application. Need startup and create of tables.
-- unit tests for individual modules
+- start integrating Chapter 11 code, to provide a RESTful interface.
+- unit tests for individual modules.
 - integration level tests for probing the cache and testing the right value is returned.
-
 
 Testing Options
         -> eunit
