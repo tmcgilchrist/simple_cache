@@ -1,0 +1,10 @@
+sudo: false
+language: erlang
+otp_release:
+  - 18.3
+  - 19.0
+before_script: "./rebar3 update"
+script: "./rebar3 compile && ./rebar3 eunit"
+cache:
+  directories:
+  - $HOME/.cache/rebar3/

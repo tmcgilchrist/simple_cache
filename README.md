@@ -11,6 +11,10 @@ the original authors and all mistakes are my own.
 
 Tim
 
+## Build
+
+    $ rebar3 compile
+
 ## Running
 
   * Start 2 nodes in a terminal 'erl –name contact1 -setcookie xxxxxxxx' and
